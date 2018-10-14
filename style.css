@@ -41,6 +41,20 @@ input:focus {
   text-align: center;
 }
 
-.flip-image {
-  color: #2d72fc;
+/* .test {
+  position: relative;
+} */
+
+.toggle-sprite-front {
+  /* position: absolute; */
 }
+
+.toggle-sprite-back {
+  /* position: absolute; */
+  background: #2d72fc;
+  display: none;
+}
+
+
+
+
