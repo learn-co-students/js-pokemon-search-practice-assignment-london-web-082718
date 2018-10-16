@@ -5,9 +5,10 @@ body {
 }
 
 #container {
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 50px;
+  text-align: center;
 }
 
 #pokemon-search-form {
@@ -24,17 +25,26 @@ body {
 
 #pokemon-logo {
   width: 300px;
-  margin-left: 330px;
 }
 
 input:focus {
   outline: none;
 }
 
+#pokemon-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .pokemon-container {
   float: left;
-  width: 250px;
-  margin: auto;
+  min-width: 220px;
+  margin: 10px;
+  color: #2d72fc;
+  background-color: #fecd2f;
+  text-align: center;
 }
 
 .center-text {
@@ -44,3 +54,4 @@ input:focus {
 .flip-image {
   color: #2d72fc;
 }
+
