@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   //YOUR CODE HERE
-  
-  const pokeForm = document.querySelector('#pokemon-search-form')
   const pokeNameInput = document.querySelector('#pokemon-search-input')
   const pokeContEl = document.querySelector('#pokemon-container')
 
