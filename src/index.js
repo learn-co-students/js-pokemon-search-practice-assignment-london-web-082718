@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(POKEMON)
-  //YOUR CODE HERE
+  
+  const searchBox = document.querySelector('#pokemon-search-input')
+  const pokeURL = 'http://localhost:3000/pokemon'
+
+  function fetchAllPokemon() {
+    fetch(pokeURL)
+      .then(resp => resp.json())
+      .then(resp => pokeList.addPokemons(resp))
+      .then(pokeList.displayPokemons)
+  }
+
+  function filterPokemons() {
+    pokeList.filterPokemons(searchBox.value)
+  }
+
+  searchBox.addEventListener('keyup', filterPokemons)
+
+  fetchAllPokemon()
+
 })
+
