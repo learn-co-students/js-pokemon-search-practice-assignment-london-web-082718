@@ -18,7 +18,7 @@ const pokeList = (() => {
       );
     }
 
-    static removePokemons() {
+    static removePokemonsFromDisplay() {
       while (pokeContainer.firstChild) {
         pokeContainer.removeChild(pokeContainer.firstChild)
       }
@@ -26,8 +26,14 @@ const pokeList = (() => {
 
     static filterPokemons(text) {
       let selection = all.filter(pokemon => pokemon.name.includes(text))
-      this.removePokemons()
+      this.removePokemonsFromDisplay()
       this.displayPokemons(selection)
+    }
+
+    static deletePokemon(pokemon) {
+      fetch(pokeURL + `/${pokemon.id}`, {method: 'DELETE'})
+        .then(all.splice(all.indexOf(pokemon), 1))
+        .then(pokemon.remove())
     }
   }
 

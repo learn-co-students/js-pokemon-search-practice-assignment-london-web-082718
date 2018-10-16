@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   const searchBox = document.querySelector('#pokemon-search-input')
-  const pokeURL = 'http://localhost:3000/pokemon'
 
   function fetchAllPokemon() {
     fetch(pokeURL)
@@ -20,3 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+const pokeURL = 'http://localhost:3000/pokemon'
