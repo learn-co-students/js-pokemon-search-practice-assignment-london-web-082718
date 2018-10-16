@@ -42,7 +42,7 @@ class API {
     }).then(resp => resp.json())
   }
 
-  static editPokemon(pokemon) {
+  static editPokemon (pokemon) {
     return fetch(`${this.baseUrl}/${pokemon.id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
